@@ -1,0 +1,39 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<form action="/myapp/lotto_out">
+    <h1> Submit your lotto information </h1>
+    
+    <div>
+        
+        <label for="no"> 회차번호: </label>
+        <input type="number" id="no" name="no">
+    
+    </div>
+
+    <br>
+    <br>
+    <div>
+        
+        <label for="lucky_numbers"> 
+            번호 입력: 
+        </label>
+        <input type="text" id="lucky_numbers" name="lucky_numbers">
+
+        <input type="submit" value= "제출">
+        
+    </div>
+
+    <p>
+        (번호의 입력은 공백으로 구분합니다.)
+        <br>
+        ex. 1 2 3 4 5 6
+    </p>
+
+
+
+{% endblock content %}

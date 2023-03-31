@@ -1,0 +1,38 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1> Please submit your information </h1>
+<form action="/myapp/pong/" method="POST">
+    {% csrf_token %}
+    
+    {% comment %} method의 기본은 GET임! {% endcomment %}
+    <div>
+        
+        <label for="user_name"> 이름: </label>
+        <input type="text" id="user_name" name="user_name">
+        {% comment %} name= 이 키값임~ {% endcomment %}
+    
+    </div>
+    
+    <div>
+        <label for="age"> 나이: </label>
+        <input type="number" id="age" name="age">
+
+    </div>
+
+    <div>
+        <label for="MBTI"> MBTI: </label>
+        <input type="text" id="MBTI" name="MBTI">
+
+    </div>
+
+    <div>
+        <input type="submit" value= "제출">
+
+    </div>
+</form>
+
+{% endblock content %}

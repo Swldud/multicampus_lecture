@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block qwer %}
+    
+    <h1> Check your lucky with Lotto </h1>
+    <!-- 중괄호를 두 개 쓰는 것 = DTL -->
+    <h2> 회차번호: {{ draw_no }} </h2>
+    <h3> 이번 주의 당첨번호
+        <br>
+        {{ real_numbers }} + {{ bonus_number }} </h3>
+    
+    <p>
+        
+        <hr>
+        내 번호
+        {{ lucky_numbers }}
+        <br>
+        <hr>
+        {{ draw_no }} 회차에서 {{ rank }}등 하셨습니다!
+
+    </p>
+
+{% endblock qwer %}

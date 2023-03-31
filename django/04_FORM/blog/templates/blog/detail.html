@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1>
+    {{ student.name }}'s info
+</h1>
+
+<p> age: {{ student.age }} </p>
+<p> balance: {{ student.balance }} </p>
+<p> major: {{ student.major }} </p>
+<p> phone: {{ student.phone }} </p>
+<p> mbti: {{ student.mbti }} </p>
+<p> address: {{ student.address }} </p>
+
+
+{% comment %} GET /blog/1/delete/ => 안받아줌 
+              POST /blog/1/delete/ => 진행
+{% endcomment %}
+
+
+
+{% comment %} 삭제 코드 {% endcomment %}
+
+    {% comment %} <form action="/blog/{{student.pk}}/delete/" method ="POST">
+        {% csrf_token %}
+       <button onclick="return confirm('Are you sure to delete?')"> 
+            delete </button>
+    </form> {% endcomment %}
+<div>    
+    <form action="{% url 'blog:delete' student.pk %}" method ="POST">
+        {% csrf_token %}
+       <button onclick="return confirm('Are you sure to delete?')"> 
+            delete </button>
+
+    </form>
+
+
+</div>
+
+
+{% comment %} edit 코드 {% endcomment %}
+
+<div>
+    <a href="{% url 'blog:update' student.pk %}">
+        <button>edit</button>
+    </a>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                {% comment %} <a href="{% url 'index' %}">Home</a> {% endcomment %}
+                <a href="/qna/">Home</a>
+            </li>
+            <li>
+                {% comment %} <a href="{% url 'create' %}">New</a> {% endcomment %}
+
+                <a href="/qna/create/">New</a>
+            </li>
+
+
+
+
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

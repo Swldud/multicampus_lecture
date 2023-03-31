@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block qwer %}
+    
+    <h1> LOTTO </h1>
+    <!-- 중괄호를 두 개 쓰는 것 = DTL -->
+    <h2> 회차번호: {{ draw_no }} </h2>
+
+    <ul>
+        {% for num in lucky_numbers %}
+
+        {% comment %} django의 주석 {{}}안의 것만 출력하고 나머지는 출력인자가 아님 {% endcomment %}
+        <li>{{ num }}</li>
+        {% endfor %}
+
+    </ul>
+
+
+
+    <p>
+        {{ lucky_numbers }}
+    </p>
+    
+{% endblock qwer %}

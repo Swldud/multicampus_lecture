@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1> {{notice.title}} </h1>
+
+<p> {{notice.rank}} </p>
+
+<p> 
+    {{notice.content}} 
+</p>
+
+
+<div>
+    <a href="/board/{{ notice.pk }}/delete/">
+
+        <button onclick="return confirm('Are you sure to delete?')"> 
+            delete </button>
+
+    </a>
+
+</div>
+
+<div>
+    <a href="/board/{{ notice.pk }}/edit/">
+
+        <button> 
+            edit </button>
+
+    </a>
+
+</div>
+
+
+{% endblock content %}

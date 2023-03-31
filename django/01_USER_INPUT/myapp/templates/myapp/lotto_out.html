@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Result</h1>
+
+<h2> 제 {{ draw_no }} 회차</h2>
+<p> 내 번호 
+    <br>
+    {{ lucky_numbers }}</p>
+<p>
+    당첨번호
+    <br>
+    {{ real_numbers }} + {{ bonus_number }}
+</p>
+
+<p>
+    {{ draw_no }} 회차에서 {{result}}개가 일치하여, 
+    <br>
+    <b>{{ rank }}등</b> 하셨습니다!
+</p>
+
+
+{% endblock content %}

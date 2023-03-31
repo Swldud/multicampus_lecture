@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block qwer %}
+    
+    <h1> This week's LOTTO </h1>
+    <!-- 중괄호를 두 개 쓰는 것 = DTL -->
+    <h2> 회차번호: {{ draw_no }} </h2>
+    <p>
+        {{ real_numbers }} + {{ bonus_number }}
+    </p>
+</body>
+</html>
+
+{% endblock qwer %}

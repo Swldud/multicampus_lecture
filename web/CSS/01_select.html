@@ -1,0 +1,42 @@
+<!-- 01_selector.html -->
+
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /*글자 색*/
+            color: blue;
+            font-size: 20px;
+            
+
+        }
+            /* select specificity의 점수가 높을 수록, 같은 점수라면 뒤에 작성할 수록 입력받는 우선순위가 높아짐 */
+        .red {
+            color: red;
+        }
+        .green {color: green;
+
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <h1>Selector</h1>
+    <button> Hi </button>
+    <div class="container">
+        Great
+        <p class= "green"> Hello </p>
+       <p class= "red" > Hello </p> 
+
+    </div>
+
+
+</body>
+</html>
